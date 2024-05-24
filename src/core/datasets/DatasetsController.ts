@@ -19,7 +19,7 @@ export class DatasetsController {
   public async transactionsLatest():Promise<void> {
     const stacksInfo = await getStacksInfo()
     for (let i=stacksInfo.stacks_tip_height; i>=1; i--) {
-      if (!checkFileExistence(stacksInfo.stacks_tip_height)) {
+      if (!checkFileExistence(i)) {
         await fetchTransactionsInBlock(i)
       } else {
         console.log(`Stopping as block ${i} exits.`)
@@ -32,7 +32,7 @@ export class DatasetsController {
   public async transactions():Promise<void> {
     const stacksInfo = await getStacksInfo()
     for (let i=stacksInfo.stacks_tip_height; i>=1; i--) {
-      if (!checkFileExistence(stacksInfo.stacks_tip_height)) {
+      if (!checkFileExistence(i)) {
         await fetchTransactionsInBlock(i)
       } else {
         console.log(`Skipping block ${stacksInfo.stacks_tip_height} exits. Move file to overwrite.`)
