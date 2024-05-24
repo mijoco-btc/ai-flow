@@ -1,6 +1,9 @@
-# revealer-api
+# aiflow-api
 
-Node Server for aiflow service.
+## Dataset Prep
+
+Reads data from stacks node and flattens it into classification format.
+Stores a JSON file per block with flattened tx data.
 
 ## Modes
 
@@ -26,7 +29,9 @@ Note: this isn't yet fully supported but here for future flexibility
 
 ```bash
 npm install
-npm run cli -- datasets {block_number}
+npm run cli -- datasets transactions latest // from current tip height to last saved block
+npm run cli -- datasets transactions n // block n
+npm run cli -- datasets transactions all // all (skips already flattened blocks)
 ```
 
 ### Mongo
