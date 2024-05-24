@@ -5,6 +5,46 @@
 Reads data from stacks node and flattens it into classification format.
 Stores a JSON file per block with flattened tx data.
 
+Flattens stacks transactions into
+
+```ts
+interface FlattenedStacksTransaction {
+  transaction_id: string;
+  sender_address:string;
+  nonce:number;
+  sponsored:boolean;
+  fee_rate:number;
+  status: string;
+  type: string;
+  index: number;
+  burn_block_time: number;
+  parent_burn_block_time: number;
+  block_time: number;
+  block_height:number;
+  post_condition_mode: string;
+
+  recipient_address?: string;
+  
+  token_transfer_amount?: number;
+  token_transfer_memo?: string;
+
+  coinbase_alt_recipient?: string;
+  coinbase_data?: string;
+
+  contract_address?: string;
+  contract_name?: string;
+  function_name?: string;
+  function_signature?: string;
+  function_args_repr?: string;
+  function_args_type?: string;
+
+  smart_contract_clarity_version?:string;
+  smart_contract_contract_address?:string;
+  smart_contract_contract_name?:string;
+  smart_contract_source_code?:string;
+}
+```
+
 ## Modes
 
 Service is organised as a server and cli.

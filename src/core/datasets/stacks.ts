@@ -2,7 +2,7 @@ import { getConfig } from "../config";
 import { writeTransactionsToJSONLFile } from "./dataset_io";
 
 
-interface Transaction {
+interface FlattenedStacksTransaction {
   transaction_id: string;
   sender_address:string;
   nonce:number;
@@ -17,8 +17,7 @@ interface Transaction {
   block_height:number;
   post_condition_mode: string;
 
-  recipient_address?: string;
-  
+  token_transfer_recipient_address?: string;
   token_transfer_amount?: number;
   token_transfer_memo?: string;
 
@@ -49,7 +48,7 @@ const TransactionType = {
 
 interface Block {
   block_number: number;
-  transactions: Transaction[];
+  transactions: FlattenedStacksTransaction[];
 }
 
 
@@ -134,7 +133,7 @@ function flattenTransaction(tx: any) {
   } else if (tx.tx_type === TransactionType.TOKEN_TRANSFER) {
     return {
       ...flattened,
-      recipient_address: tx.token_transfer?.recipient_address || '',
+      token_transfer_recipient_address: tx.token_transfer?.recipient_address || '',
       token_transfer_amount: tx.token_transfer?.amount || '',
       token_transfer_memo: tx.token_transfer?.memo || '',
     }
