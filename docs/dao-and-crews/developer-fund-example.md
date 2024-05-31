@@ -19,8 +19,17 @@ The extensions involved;
 
 ### Class Overview
 
+
+
+````mermaid
 ```mermaid
 classDiagram
+    governance-token --|> sip-10-trait
+    governance-token --|> gov-token-trait
+    governance-token --|> extension-trait
+    dev-fund --|> extension-trait
+    proposal-submission --|> extension-trait
+    proposal-voting --|> extension-trait
     class executor-dao{
       +map executed-proposals
       +map extensions
@@ -37,12 +46,10 @@ classDiagram
     class sip-10-trait{
         <<interface>>
     }
-
     class extension-trait{
         <<interface>>
         +callback()
     }
-
     class governance-token{
       +ft edg-token
       +ft edg-token-locked
@@ -77,6 +84,9 @@ classDiagram
       +callback()
     }
 ```
+````
+
+
 
 <figure><img src="../.gitbook/assets/eDAO-devfund_class.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
