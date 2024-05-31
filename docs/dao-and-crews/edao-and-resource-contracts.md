@@ -2,7 +2,7 @@
 description: Relationship between eDAO resource contracts and resources
 ---
 
-# Scenario 2: eDAO and Resource Contracts
+# eDAO and Resource Contracts
 
 Goal here is to include company concepts; resources, invoices etc within the eDAO structure.
 
@@ -11,7 +11,6 @@ Goal here is to include company concepts; resources, invoices etc within the eDA
 
 ### Class Diagram
 
-````markup
 ```mermaid
 classDiagram
     governance-token --|> sip-10-trait
@@ -99,7 +98,6 @@ classDiagram
       +callback()
     }
 ```
-````
 
 <figure><img src="../.gitbook/assets/eDAO-resource-contracts_class.drawio (3).png" alt=""><figcaption></figcaption></figure>
 

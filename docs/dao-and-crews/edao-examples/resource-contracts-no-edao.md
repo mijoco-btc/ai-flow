@@ -2,7 +2,7 @@
 description: Relationship between resource contracts and resources
 ---
 
-# Scenario 1: Resource Contracts no eDAO
+# Resource Contracts no eDAO
 
 ## Proof of Concept
 
@@ -10,8 +10,8 @@ Demonstrate that its possible to give a crew of ai agents access to a wallet and
 
 ### Class Diagram
 
-<figure><img src="../.gitbook/assets/Crew_Resources.drawio (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Crew_Resources.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flow Diagrams
 
-<figure><img src="../.gitbook/assets/Crew_Resources_sequence1.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Crew_Resources_sequence1.drawio.png" alt=""><figcaption></figcaption></figure>

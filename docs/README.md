@@ -10,7 +10,7 @@ The goal is to explore how eDAO in its current form can be integrated with Bitco
 
 Only where its useful for discussion the following convention can be used for marking authorisation levels for public Clarity methods.
 
-Note: class diagrams often denote access rights to methods. Adapting this concept for Clarity using UML conventions leads to;
+For Clarity the conventions are;
 
 \- everyone (anyone can do it)
 
@@ -24,4 +24,14 @@ Note: class diagrams often denote access rights to methods. Adapting this concep
 
 \- extension access (self)
 
-These are meant as a guide as they are checks implemented in business logic as opposed to structurally within Clarity but are used here just as a way to discuss authorisation concepts at the model level.\
+These are meant as a guide as they are checks implemented in business logic as opposed to structurally within Clarity but are used here just as a way to discuss authorisation concepts at the model level.
+
+## Crew and Resource Management
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-29 at 14.43.49.png" alt=""><figcaption></figcaption></figure>
+
+Following suggestion shows flow using resource contracts controlling a 402 payment flow with Crews (collections of human or AI agents) offering services.
+
+
+
+\
