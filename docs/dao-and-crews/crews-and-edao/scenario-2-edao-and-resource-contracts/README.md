@@ -4,6 +4,35 @@ description: Relationship between eDAO resource contracts and resources
 
 # Scenario 2: eDAO and Resource Contracts
 
+
+
+
+
+
+
+
+
+````plant-uml
+```plantuml
+@startuml
+Alice -> Bob: Hello Bob, how are you?
+Bob --> Alice: I'm good, thanks!
+@enduml
+````
+
+
+
+
+
+````dot
+```dot
+digraph G {
+    A -> B;
+    B -> C;
+    C -> A;
+}
+````
+
 ```mermaid
 sequenceDiagram
     Alice->John: Hello John, how are you?
