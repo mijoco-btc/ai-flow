@@ -19,6 +19,67 @@ The extensions involved;
 
 ### Class Overview
 
+````mermaid
+```mermaid
+classDiagram
+    class executor-dao{
+      +map executed-proposals
+      +map extensions
+      +construct()
+      +execute()
+      +request-extension-callback()
+      +set-extension()
+      +set-extensions()
+      -is-self-or-extension()
+    }
+    class gov-token-trait{
+        <<interface>>
+    }
+    class sip-10-trait{
+        <<interface>>
+    }
+
+    class extension-trait{
+        <<interface>>
+        +callback()
+    }
+
+    class governance-token{
+      +ft edg-token
+      +ft edg-token-locked
+      +ft token-name
+      -is-dao-or-extension()
+      +edg-transafer()
+      +edg-lock()
+      +edg-unlock()
+      +edg-mint()
+      +edg-burn()
+    }
+    class dev-fund{
+      +map monthly-team-allowances
+      -map claim-counts
+      -is-dao-or-extension()
+      +set-developer-allowance()
+      +transfer()
+      +claim()
+      +callback()
+    }
+    class proposal-voting{
+      +var governance-token-principal
+      +map proposals
+      +map member-total-votes
+      +vote()
+      +conclude()
+    }    
+    class proposal-submission{
+      +var governance-token-principal
+      +map parameters
+      +propose()
+      +callback()
+    }
+```
+````
+
 <figure><img src="../.gitbook/assets/eDAO-devfund_class.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Part 1: Deploying the Dev Fund
