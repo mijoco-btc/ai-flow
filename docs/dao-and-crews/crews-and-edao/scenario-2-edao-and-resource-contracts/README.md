@@ -30,6 +30,19 @@ sequenceDiagram
 ### Class Diagram
 
 ```mermaid
+sequenceDiagram
+    participant User
+    participant DAO
+    participant Company
+    
+    User->>DAO: create-dao(dao-id, name, rules)
+    DAO-->>User: success
+    User->>Company: register-company(company-id, dao-id)
+    Company-->>User: success
+
+```
+
+```mermaid
 classDiagram
     class Shape{
         <<interface>>
