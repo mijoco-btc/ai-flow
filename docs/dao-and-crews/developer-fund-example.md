@@ -19,7 +19,6 @@ The extensions involved;
 
 ### Class Overview
 
-````mermaid
 ```mermaid
 classDiagram
     governance-token --|> sip-10-trait
@@ -82,7 +81,6 @@ classDiagram
       +callback()
     }
 ```
-````
 
 
 

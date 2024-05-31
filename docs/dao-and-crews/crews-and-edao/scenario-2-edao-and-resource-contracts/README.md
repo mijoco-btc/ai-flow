@@ -4,118 +4,102 @@ description: Relationship between eDAO resource contracts and resources
 
 # Scenario 2: eDAO and Resource Contracts
 
-
-
-
-
-
-
-
-
-````plant-uml
-```plantuml
-@startuml
-Alice -> Bob: Hello Bob, how are you?
-Bob --> Alice: I'm good, thanks!
-@enduml
-````
-
-
-
-
-
-````dot
-```dot
-digraph G {
-    A -> B;
-    B -> C;
-    C -> A;
-}
-````
-
-```mermaid
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    loop Every minute
-    John-->Alice: Great!
-    end
-    alt is sick
-        Bob->>Alice: Not so good :(
-    else is well
-        Bob->>Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-        Bob->>Alice: Thanks for asking
-    end
-```
-
 Goal here is to include company concepts; resources, invoices etc within the eDAO structure.
 
 1. resources are managed by resource manager
 2. resource manager is managed by eDAO
 
-````mermaid
-```mermaid
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    loop Every minute
-    John-->Alice: Great!
-    end
-    alt is sick
-        Bob->>Alice: Not so good :(
-    else is well
-        Bob->>Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-        Bob->>Alice: Thanks for asking
-    end
-```
-````
-
 ### Class Diagram
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant DAO
-    participant Company
-    
-    User->>DAO: create-dao(dao-id, name, rules)
-    DAO-->>User: success
-    User->>Company: register-company(company-id, dao-id)
-    Company-->>User: success
-
-```
-
+````mermaid
 ```mermaid
 classDiagram
-    class Shape{
+    governance-token --|> sip-10-trait
+    governance-token --|> gov-token-trait
+    governance-token --|> extension-trait
+    dev-fund --|> extension-trait
+    proposal-submission --|> extension-trait
+    proposal-voting --|> extension-trait
+    resource-manager --|> resource-mgmt-trait
+    resource-manager --|> invoice-trait
+    class gov-token-trait{
         <<interface>>
-        noOfVertices
-        draw()
     }
-    class DAO {
-      -dao-id: buff 32
-      -name: buff 50
-      -owner: principal
-      -rules: buff 200
-      +create-dao(dao-id: buff 32, name: buff 50, rules: buff 200): Response
-      #get-dao(dao-id: buff 32): Response
-      ~internal-method(): void
-      -private-method(): void
+    class sip-10-trait{
+        <<interface>>
     }
-    class Company {
-      -company-id: buff 32
-      -dao-id: buff 32
-      -owner: principal
-      +register-company(company-id: buff 32, dao-id: buff 32): Response
-      +get-company(company-id: buff 32): Response
-      +create-and-register-company(company-id: buff 32, dao-id: buff 32, name: buff 50, rules: buff 200): Response
+    class extension-trait{
+        <<interface>>
+        +callback()
+    }
+    class resource-mgmt-trait{
+        <<interface>>
+        +set-payment-address()
+        +add-resource()
+        +toggle-resource()
+        +toggle-resource-by-name()
+    }
+    class invoice-trait{
+        <<interface>>
+        +pay-invoice()
+        +pay-invoice-by-resource-name()
+    }
+    class executor-dao{
+      +map executed-proposals
+      +map extensions
+      +construct()
+      +execute()
+      +request-extension-callback()
+      +set-extension()
+      +set-extensions()
+      -is-self-or-extension()
+    }
+    class governance-token{
+      +ft edg-token
+      +ft edg-token-locked
+      +ft token-name
+      -is-dao-or-extension()
+      +edg-transafer()
+      +edg-lock()
+      +edg-unlock()
+      +edg-mint()
+      +edg-burn()
+    }
+    class resource-manager{
+      +var payment-address
+      +var total-revenue
+      +var invoice-count
+      +var user-count
+      +map UserData
+      +map UserIndexes
+      +map ResourceIndexes
+      +map ResourceData
+      +map InvoiceData
+      +map RecentPayments
+      +is-dao-or-extension()
+      +set-payment-address()
+      +add-resource()
+      +toggle-resource()
+      +toggle-resource-by-name()
+      +pay-invoice()
+      +pay-invoice-by-resource-name()
+      +callback()
+    }
+    class proposal-voting{
+      +var governance-token-principal
+      +map proposals
+      +map member-total-votes
+      +vote()
+      +conclude()
+    }    
+    class proposal-submission{
+      +var governance-token-principal
+      +map parameters
+      +propose()
+      +callback()
     }
 ```
-
-\
-
+````
 
 <figure><img src="../../../.gitbook/assets/eDAO-resource-contracts_class.drawio (3).png" alt=""><figcaption></figcaption></figure>
 
