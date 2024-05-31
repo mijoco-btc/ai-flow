@@ -101,6 +101,6 @@ classDiagram
 ```
 ````
 
-<figure><img src="../../../.gitbook/assets/eDAO-resource-contracts_class.drawio (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/eDAO-resource-contracts_class.drawio (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Flow Diagrams

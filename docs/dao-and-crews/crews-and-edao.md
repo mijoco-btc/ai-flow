@@ -18,7 +18,7 @@ Open questions;
 
 Following suggestion shows flow using resource contracts controlling a 402 payment flow with Crews (collections of human or AI agents) offering services.
 
-![](<../../.gitbook/assets/Screenshot 2024-05-29 at 14.43.49.png>)
+![](<../.gitbook/assets/Screenshot 2024-05-29 at 14.43.49.png>)
 
 Questions
 
