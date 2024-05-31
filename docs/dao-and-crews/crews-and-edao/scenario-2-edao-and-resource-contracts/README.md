@@ -13,6 +13,11 @@ Goal here is to include company concepts; resources, invoices etc within the eDA
 
 ```mermaid
 classDiagram
+    class Shape{
+        <<interface>>
+        noOfVertices
+        draw()
+    }
     class DAO {
       - dao-id: buff 32
       - name: buff 50
