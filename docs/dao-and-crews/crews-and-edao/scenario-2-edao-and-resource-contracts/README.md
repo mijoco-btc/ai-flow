@@ -4,6 +4,22 @@ description: Relationship between eDAO resource contracts and resources
 
 # Scenario 2: eDAO and Resource Contracts
 
+```mermaid
+sequenceDiagram
+    Alice->John: Hello John, how are you?
+    loop Every minute
+    John-->Alice: Great!
+    end
+    alt is sick
+        Bob->>Alice: Not so good :(
+    else is well
+        Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob->>Alice: Thanks for asking
+    end
+```
+
 Goal here is to include company concepts; resources, invoices etc within the eDAO structure.
 
 1. resources are managed by resource manager
