@@ -9,6 +9,24 @@ Goal here is to include company concepts; resources, invoices etc within the eDA
 1. resources are managed by resource manager
 2. resource manager is managed by eDAO
 
+````mermaid
+```mermaid
+sequenceDiagram
+    Alice->John: Hello John, how are you?
+    loop Every minute
+    John-->Alice: Great!
+    end
+    alt is sick
+        Bob->>Alice: Not so good :(
+    else is well
+        Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob->>Alice: Thanks for asking
+    end
+```
+````
+
 ### Class Diagram
 
 ```mermaid
@@ -19,50 +37,24 @@ classDiagram
         draw()
     }
     class DAO {
-      - dao-id: buff 32
-      - name: buff 50
-      - owner: principal
-      - rules: buff 200
-      + create-dao(dao-id: buff 32, name: buff 50, rules: buff 200): Response
-      \# get-dao(dao-id: buff 32): Response
-      ~ internal-method(): void
-      - private-method(): void
+      -dao-id: buff 32
+      -name: buff 50
+      -owner: principal
+      -rules: buff 200
+      +create-dao(dao-id: buff 32, name: buff 50, rules: buff 200): Response
+      #get-dao(dao-id: buff 32): Response
+      ~internal-method(): void
+      -private-method(): void
     }
-
     class Company {
-      - company-id: buff 32
-      - dao-id: buff 32
-      - owner: principal
-      + register-company(company-id: buff 32, dao-id: buff 32): Response
-      + get-company(company-id: buff 32): Response
-      + create-and-register-company(company-id: buff 32, dao-id: buff 32, name: buff 50, rules: buff 200): Response
+      -company-id: buff 32
+      -dao-id: buff 32
+      -owner: principal
+      +register-company(company-id: buff 32, dao-id: buff 32): Response
+      +get-company(company-id: buff 32): Response
+      +create-and-register-company(company-id: buff 32, dao-id: buff 32, name: buff 50, rules: buff 200): Response
     }
 ```
-
-````markdown
-```mermaid
-classDiagram
-    class DAO {
-      - dao-id: buff 32
-      - name: buff 50
-      - owner: principal
-      - rules: buff 200
-      + create-dao(dao-id: buff 32, name: buff 50, rules: buff 200): Response
-      \# get-dao(dao-id: buff 32): Response
-      ~ internal-method(): void
-      - private-method(): void
-    }
-
-    class Company {
-      - company-id: buff 32
-      - dao-id: buff 32
-      - owner: principal
-      + register-company(company-id: buff 32, dao-id: buff 32): Response
-      + get-company(company-id: buff 32): Response
-      + create-and-register-company(company-id: buff 32, dao-id: buff 32, name: buff 50, rules: buff 200): Response
-    }
-```
-````
 
 \
 

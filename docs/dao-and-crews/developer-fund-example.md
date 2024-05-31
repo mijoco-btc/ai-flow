@@ -19,8 +19,6 @@ The extensions involved;
 
 ### Class Overview
 
-
-
 ````mermaid
 ```mermaid
 classDiagram
@@ -87,8 +85,6 @@ classDiagram
 ````
 
 
-
-<figure><img src="../.gitbook/assets/eDAO-devfund_class.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Part 1: Deploying the Dev Fund
 
