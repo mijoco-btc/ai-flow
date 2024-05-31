@@ -1,16 +1,16 @@
 ---
-description: Main use case for eDAO Company launcher.
+description: Minimal use case for eDAO Company launcher.
 ---
 
 # Use Cases
 
 ## Launch and Manage DAO
 
-As a Manager I want to configure and launch my DAO
+As the DAO Manager I want to configure and launch my DAO
 
-As a Manager I want to suspend trading
+As a DAO Manager I want to suspend trading
 
-As a Manager I want to&#x20;
+
 
 ## Manage Resources
 
@@ -18,13 +18,11 @@ As a Resource Manager I want to add new resources to my company
 
 As a Resource Manager i want to remove or disable resources
 
-As a Resource Manager I want to update the price of resources
 
-As a Resource Manager I want to be able to view all order
 
-## Purchase Resources
+## Make Payments
 
-As a customer I want to purchase an NFT
+As a community member I want to purchase some company token
 
-As a customer I want to view my orders
+As a community member I want to claim dividends
 

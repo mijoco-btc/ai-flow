@@ -2,9 +2,9 @@
 description: Relationship between eDAO resource contracts and resources
 ---
 
-# eDAO and Resource Contracts
+# eDAO Entity Structure
 
-Goal here is to include company concepts; resources, invoices etc within the eDAO structure.
+Goal is to define relationships between company, resources, invoices etc within the eDAO structure. Following are key assumptions;
 
 1. resources are managed by resource manager
 2. resource manager is managed by eDAO
@@ -19,6 +19,7 @@ classDiagram
     dev-fund --|> extension-trait
     proposal-submission --|> extension-trait
     proposal-voting --|> extension-trait
+    resource-manager --|> extension-trait
     resource-manager --|> resource-mgmt-trait
     resource-manager --|> invoice-trait
     class gov-token-trait{
@@ -99,6 +100,3 @@ classDiagram
     }
 ```
 
-<figure><img src="../.gitbook/assets/eDAO-resource-contracts_class.drawio (3).png" alt=""><figcaption></figcaption></figure>
-
-### Flow Diagrams
