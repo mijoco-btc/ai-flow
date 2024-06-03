@@ -8,6 +8,16 @@ Defines the flows (at contract level) which enact the use cases.
 
 ### Manage Resources
 
+````mermaid
+# Sequence Diagram 1
+
+```mermaid
+sequenceDiagram
+    resource manager->>resources: add-resource
+    resources-->>resource manager: response
+```
+````
+
 #### Add resource
 
 ```mermaid
