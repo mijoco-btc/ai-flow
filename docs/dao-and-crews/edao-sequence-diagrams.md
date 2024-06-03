@@ -13,7 +13,7 @@ Defines the flows (at contract level) which enact the use cases.
 ```mermaid
 sequenceDiagram
     resource manager->>resources: add-resource
-    resources-->>resource manager: 
+    resources-->>resource manager: response
 ```
 
 #### Toggle resource
@@ -21,7 +21,7 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     resource manager->>resources: toggle-resource
-    resources-->>resource manager: 
+    resources-->>resource manager: response
 
 ```
 
