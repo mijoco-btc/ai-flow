@@ -22,7 +22,9 @@ As a Resource Manager i want to remove or disable resources
 
 ## Make Payments
 
-As a community member I want to purchase some company token
+As a Community Member I want to purchase some tokens
 
-As a community member I want to claim dividends
+As a Community Member I want to claim dividends
+
+As an Agent I need to detect payments and issue tokens
 
