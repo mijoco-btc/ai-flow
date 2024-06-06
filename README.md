@@ -1,11 +1,28 @@
-# aiflow-api
+# aiflow
 
-## Dataset Prep
+## Introduction
 
-Reads data from stacks node and flattens it into classification format.
-Stores a JSON file per block with flattened tx data.
+AI Flow supports tasks in the CrewAI + DAO + Resource Contracts application space;
 
-Flattens stacks transactions into
+### 1 DAO Launcher
+
+The script runs in same directory as the calling code.
+
+```rest
+POST /dao-launcher/v1/launch  # body = template:DaoTemplate
+```
+
+### 2 Datasets
+
+AI Flow hooks onto to a Stacks (or Bitcoin) full, pulls any or all blocks of transaction data and flattens the data into classification formatted jsonl files (one per block).
+
+```rest
+GET /datasets/v1/transactions/:block  # flattens given block
+GET /datasets/v1/transactions/latest  # flattens new blocks since last run
+GET /datasets/v1/transactions         # flattens new blocks (skips previously flattened blocks)
+```
+
+The classification data has the format;
 
 ```ts
 interface FlattenedStacksTransaction {
@@ -45,25 +62,25 @@ interface FlattenedStacksTransaction {
 }
 ```
 
-## Modes
+## Development
 
-Service is organised as a server and cli.
+Services can be run either via rest or cli.
 
-## Build
+### Build
 
 ```bash
 npm install
 npm run build
 ```
 
-## Develop
+### Develop
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Command Line
+### Command Line
 
 Note: this isn't yet fully supported but here for future flexibility
 
@@ -96,12 +113,4 @@ run deploy script to build / push docker image then on target server run followi
 # stag
 docker rm -f aiflow_api_production
 docker run -d -t -i --network host --name aiflow_api_production -p 6060:6060 -e NODE_ENV='linode-production' mijoco/aiflow_api
-```
-
-## DAO Launcher
-
-The script runs in same directory as the calling code.
-
-```bash
-cd src/core/dao-launch
 ```
