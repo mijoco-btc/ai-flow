@@ -15,3 +15,11 @@ export type ConfigI = {
 	stacksApi: string;
 	jsonl_path_transactions: string;
   };
+  
+  export type DaoTemplate = {
+	addresses: Array<string>;
+	tokenName?: string;
+	tokenSymbol?: string;
+	tokenUrl?: string;
+  }
+  

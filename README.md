@@ -97,3 +97,11 @@ run deploy script to build / push docker image then on target server run followi
 docker rm -f aiflow_api_production
 docker run -d -t -i --network host --name aiflow_api_production -p 6060:6060 -e NODE_ENV='linode-production' mijoco/aiflow_api
 ```
+
+## DAO Launcher
+
+The script runs in same directory as the calling code.
+
+```bash
+cd src/core/dao-launch
+```

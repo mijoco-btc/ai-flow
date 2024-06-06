@@ -7,6 +7,7 @@ import { connect } from './core/data/mongodb_connection'
 import { configRoutes } from './server/routes/config/configRoutes'
 import { audionalsRoutes } from './server/routes/audionals/audionalsRoutes'
 import { runesRoutes } from './server/routes/runes/runesRoutes'
+import { daoLaunchRoutes } from './server/routes/dao-launch/daoLaunchRoutes'
 import { datasetsRoutes } from './server/routes/datasets/datasetsRoutes'
 import { WebSocketServer } from 'ws'
 import { testJob } from './server/routes/jobs/JobScheduler';
@@ -36,6 +37,7 @@ app.use('/config/v1', configRoutes);
 app.use('/runes/v1', runesRoutes);
 app.use('/audionals/v1', audionalsRoutes);
 app.use('/datasets/v1', datasetsRoutes);
+app.use('/dao/v1', daoLaunchRoutes);
 
 console.log(`\n\nExpress is listening at http://localhost:${getConfig().port}`);
 console.log('Startup Environment: ', process.env.TARGET_ENV);

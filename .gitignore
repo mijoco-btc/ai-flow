@@ -5,6 +5,7 @@ node_modules
 /volumes
 /dist
 /build
+/bin/projects/*
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
