@@ -41,14 +41,16 @@ app.use('/dao/v1', daoLaunchRoutes);
 
 console.log(`\n\nExpress is listening at http://localhost:${getConfig().port}`);
 console.log('Startup Environment: ', process.env.TARGET_ENV);
-console.log(`Mongo connection at ${getConfig().mongoDbUrl}`);
-console.log(`NODE_ENV ${process.env.NODE_ENV}\n\n`);
+console.log('stacks node = ' + getConfig().stacksApi)
+console.log('jsonl path = ' + getConfig().jsonl_path_transactions)
+
+//console.log(`Mongo connection at ${getConfig().mongoDbUrl}`);
 
 async function connectToMongoCloud() {
 
   await connect();
 
-  console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  console.log("Pinged your deployment. You successfully connected to MongoDB!\n\n");
 
   const server = app.listen(getConfig().port, () => {
     return;

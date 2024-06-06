@@ -4,12 +4,11 @@ import process from 'process'
 let CONFIG= {} as ConfigI;
 
 export function printConfig() {
-  console.log('== ' + process.env.NODE_ENV + ' ==========================================================')
-  console.log('CONFIG.mongoDbName = ' + CONFIG.mongoDbName)
-  console.log('CONFIG.stacksApi = ' + CONFIG.stacksApi)
-  console.log('CONFIG.host = ' + CONFIG.host)
-  console.log('CONFIG.port = ' + CONFIG.port)
-  console.log('CONFIG.jsonl_path_transactions = ' + CONFIG.jsonl_path_transactions)
+  //console.log('== ' + process.env.NODE_ENV + ' ==========================================================')
+  //console.log('CONFIG.mongoDbName = ' + CONFIG.mongoDbName)
+  //console.log('host = ' + CONFIG.host + ':' + CONFIG.port)
+  //console.log('stacks node = ' + CONFIG.stacksApi)
+  //console.log('jsonl path = ' + CONFIG.jsonl_path_transactions)
 }
 
 export function setConfigOnStart() {
