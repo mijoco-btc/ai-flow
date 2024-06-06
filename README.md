@@ -4,6 +4,14 @@
 
 AI Flow supports tasks in the CrewAI + DAO + Resource Contracts application space;
 
+See also;
+
+- [stxeco-launcher](https://github.com/radicleart/stxeco-launcher)
+- [ai-flow](https://github.com/radicleart/ai-flow)
+- [bitcoin-dao](https://github.com/radicleart/bitcoin-dao)
+
+Note: this is experimental code - use at your own risk
+
 ### 1 DAO Launcher
 
 The script runs in same directory as the calling code.
