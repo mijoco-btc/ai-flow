@@ -12,6 +12,7 @@ export function printConfig() {
 }
 
 export function setConfigOnStart() {
+  
   CONFIG.host = process.env.host || '';
   CONFIG.port = Number(process.env.port) || 6060;
   CONFIG.stacksApi = process.env.stacksApi || '';

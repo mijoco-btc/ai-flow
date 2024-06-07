@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "build": "NODE_ENV=production tsc",
-    "start": "NODE_ENV=development node dist/index.js",
+    "start": "NODE_ENV=development node dist/app.js",
     "dev": "NODE_ENV=development ts-node-dev --respawn src/app.ts",
-    "cli": "NODE_ENV=development ts-node src/cli/index.ts"
+    "cli": "NODE_ENV=development ts-node src/cli/app.ts"
   },
   "keywords": [],
   "author": "",

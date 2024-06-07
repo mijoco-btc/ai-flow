@@ -17,6 +17,8 @@ export type ConfigI = {
   };
   
   export type DaoTemplate = {
+	deployer: string;
+	projectName: string;
 	addresses: Array<string>;
 	tokenName?: string;
 	tokenSymbol?: string;

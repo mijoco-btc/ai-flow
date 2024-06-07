@@ -42,6 +42,7 @@ app.use('/dao/v1', daoLaunchRoutes);
 console.log(`\n\nExpress is listening at http://localhost:${getConfig().port}`);
 console.log('Startup Environment: ', process.env.TARGET_ENV);
 console.log('stacks node = ' + getConfig().stacksApi)
+console.log('stacks node = ' + getConfig().stacksApi)
 console.log('jsonl path = ' + getConfig().jsonl_path_transactions)
 
 //console.log(`Mongo connection at ${getConfig().mongoDbUrl}`);

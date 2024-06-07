@@ -24,15 +24,19 @@ export function runScript(template:DaoTemplate) {
   const scriptPath = path.join(__dirname, '../../../bin/template.sh');
   console.log('runScript: ' + scriptPath)
   // Execute the bash script
+  process.env.HOME = '/Users/mikey'; // Set HOME directory
+
   const gitUrl = 'https://github.com/radicleart/bitcoin-dao'
-  exec(`bash ${scriptPath} "${gitUrl}" "${template.addresses[0]}" "${template.addresses[1]}" "${template.addresses[2]}" "${template.addresses[3]}" "${template.tokenName}" "${template.tokenSymbol}" "${template.tokenUrl}"`, (error, stdout, stderr) => {
+  exec(`bash ${scriptPath} "${template.projectName}" "${gitUrl}" "${template.addresses[0]}" "${template.addresses[1]}" "${template.addresses[2]}" "${template.addresses[3]}" "${template.tokenName}" "${template.tokenSymbol}" "${template.tokenUrl}" "${template.deployer}"`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error: ${error.message}`);
-      throw new Error(`Error: ${error.message}`);
+      //throw new Error(`Error: ${error.message}`);
+      //return false;
     }
     if (stderr) {
       console.error(`Stderr: ${stderr}`);
-      throw new Error(`Error: ${stderr}`);
+      //throw new Error(`Error: ${stderr}`);
+      //return false;
     }
     console.log(`Output: ${stdout}`);
     return true;
