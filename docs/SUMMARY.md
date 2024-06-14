@@ -12,3 +12,5 @@
     * [Resource Contracts no eDAO](dao-and-crews/edao-examples/resource-contracts-no-edao.md)
   * [eDAO Entity Structure](dao-and-crews/edao-entity-structure.md)
   * [Deployment](dao-and-crews/deployment.md)
+* [BNS-X](bns-x/README.md)
+  * [mainnet](bns-x/mainnet.md)
