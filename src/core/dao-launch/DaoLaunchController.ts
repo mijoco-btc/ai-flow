@@ -1,6 +1,6 @@
 import { Body, BodyProp, Get, Post, Route } from "tsoa";
 import { DaoTemplate } from "../../types/local_types";
-import { getCommandVersion, runScript } from "./commands";
+import { constructDao, getCommandVersion, runScript } from "./commands";
 
 
 @Route("/dao-launcher/v1")
@@ -9,6 +9,11 @@ export class DaoLaunchController {
   @Get("/")
   public async launchDaoInfo():Promise<string> {
     return 'hi';
+  }
+
+  @Get("/")
+  public async constructDao(address:string):Promise<string> {
+    return await constructDao(address)
   }
 
   @Post("/launch")

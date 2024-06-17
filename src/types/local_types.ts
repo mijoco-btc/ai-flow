@@ -13,6 +13,7 @@ export type ConfigI = {
 	inscriptionsApi1: string;
 	inscriptionsApi2: string;
 	stacksApi: string;
+	keys: string;
 	jsonl_path_transactions: string;
   };
   

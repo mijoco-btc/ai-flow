@@ -15,6 +15,15 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/construct/:address", async (req, res, next) => {
+  try {
+    const result = await controller.constructDao(req.params.address);
+    return res.send(result);
+  } catch (error:any) {
+    return res.status(500).send({failed: true, message: error.message})
+  }
+});
+
 router.post("/launch", async (req, res, next) => {
   try {
     const template:DaoTemplate = req.body;

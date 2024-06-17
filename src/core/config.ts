@@ -21,6 +21,7 @@ export function setConfigOnStart() {
   CONFIG.mongoUser = process.env.mongoUser || ''
   CONFIG.mongoPwd = process.env.mongoPwd || ''
   CONFIG.jsonl_path_transactions = process.env.jsonl_path_transactions || ''
+  CONFIG.keys = process.env.keys || ''
 }
 
 export function getConfig() {
