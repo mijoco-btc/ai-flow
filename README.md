@@ -1,124 +1,116 @@
-# aiflow
+# Residency Proposal
 
-## Introduction
+#### **What's your name/your team's name?**
 
-AI Flow supports tasks in the CrewAI + DAO + Resource Contracts application space;
+Mike Cohen
 
-See also;
+Discord: mijoco.btc
 
-- [stxeco-launcher](https://github.com/radicleart/stxeco-launcher)
-- [ai-flow](https://github.com/radicleart/ai-flow)
-- [bitcoin-dao](https://github.com/radicleart/bitcoin-dao)
+GitBook: [https://brighton-blockchain.gitbook.io/sbtc-bridge/](https://brighton-blockchain.gitbook.io/sbtc-bridge/)
 
-Note: this is experimental code - use at your own risk
+GitHub: [https://github.com/radicleart](https://github.com/radicleart)
 
-### 1 DAO Launcher
+Twitter: [https://twitter.com/radicleart](https://twitter.com/radicleart)
 
-The script runs in same directory as the calling code.
+#### **Best email on which to contact you?**
 
-```rest
-POST /dao-launcher/v1/launch  # body = template:DaoTemplate
-```
+Email: mjoecohen@gmail.com
 
-### 2 Datasets
+#### **Personal Statement**
 
-AI Flow hooks onto to a Stacks (or Bitcoin) full, pulls any or all blocks of transaction data and flattens the data into classification formatted jsonl files (one per block).
+The world is converging on Bitcoin as the most secure, decentralised and censorship resistant store of value available. However, the inescapable truth is that layer 2 solutions are necessary if Bitcoin DeFi is going to fulfil its potential and scale up to millions of users.&#x20;
 
-```rest
-GET /datasets/v1/transactions/:block  # flattens given block
-GET /datasets/v1/transactions/latest  # flattens new blocks since last run
-GET /datasets/v1/transactions         # flattens new blocks (skips previously flattened blocks)
-```
+The hard problem is how to bridge bitcoin, to a smart contract enabled layer 2, without the risk of loss of funds, hacks and exploits which come as standard with custodial solutions?&#x20;
 
-The classification data has the format;
+The answer is the decentralised sBTC bridge protocol. sBTC addresses the problem of non-custodial writes to the Bitcoin blockchain and is in a unique position, within the blockchain industry, to solve this important bridging problem.
 
-```ts
-interface FlattenedStacksTransaction {
-  transaction_id: string;
-  sender_address:string;
-  nonce:number;
-  sponsored:boolean;
-  fee_rate:number;
-  status: string;
-  type: string;
-  index: number;
-  burn_block_time: number;
-  parent_burn_block_time: number;
-  block_time: number;
-  block_height:number;
-  post_condition_mode: string;
+Given the strategic importance of sBTC to the Stacks ecosystem, the development of free at the point of use, open source, web based tools which provide access to the main sBTC features is crucial. These web based tools will ultimately give users the ability to use sBTC but will provide the important function of supporting development of the core protocol and overall sBTC product development and go to market strategy.
 
-  recipient_address?: string;
-  
-  token_transfer_amount?: number;
-  token_transfer_memo?: string;
+My plan is to use this residency to continue my work on sBTC Bridge and Signer Dashboard to extend the products applicability, from the early sBTC Alpha release, through sBTC Mini and on to the full Nakamoto release early next year.
 
-  coinbase_alt_recipient?: string;
-  coinbase_data?: string;
+#### **End Product: What does success look like?**
 
-  contract_address?: string;
-  contract_name?: string;
-  function_name?: string;
-  function_signature?: string;
-  function_args_repr?: string;
-  function_args_type?: string;
+By the end of the residency, the sBTC Bridge and sBTC Signer Dashboard web based tools and APIs will be operational on bitcoin testnet and mainnet.
 
-  smart_contract_clarity_version?:string;
-  smart_contract_contract_address?:string;
-  smart_contract_contract_name?:string;
-  smart_contract_source_code?:string;
-}
-```
+The core feature set of each application will be;
 
-## Development
+1. sBTC Bridge
+   * Deposit bitcoin (mint sBTC)
+   * Withdraw bitcoin (burn sBTC)
+   * Track deposit and withdrawal transactions&#x20;
+2. sBTC Signer Dashboard
+   * Signer details
+   * Signer transaction analytics
+   * Transaction analytics
+   * High level stats including;
+     * Total value locked
+     * Number of unique addresses
+   * Signer reputation
 
-Services can be run either via rest or cli.
+Each web application will be supported by an indexer API that caches contract data to support fast access and complex queries.&#x20;
 
-### Build
+I will continue to work with @Macxim who has done such a great job delivering the UI/UX design system under the guidance of Andre in his role as product manager.
 
-```bash
-npm install
-npm run build
-```
+Detailed sprint planning will be delivered at the beginning of each month. Plans will be tailored to the core project planning and tracked via GitBook, GitHub Issues and Pull Requests.&#x20;
 
-### Develop
+An outline of the delivery schedule is; &#x20;
 
-```bash
-npm install
-npm run dev
-```
+#### **Delivery**
 
-### Command Line
+**Milestone 1: August 2023**
 
-Note: this isn't yet fully supported but here for future flexibility
+* Sprint planning
+* Release the [sBTC Bridge multi currency](https://brighton-blockchain.gitbook.io/sbtc-bridge/sbtc-bridge-plan/sbtc-bridge-user-stories/epic-currency-support) support
+* Build a public devnet that tracks sBTC Clarity development&#x20;
+* Formalise user dashboard stories
+* sBTC Signer Dashboard API development
 
-```bash
-npm install
-npm run cli -- datasets transactions latest // from current tip height to last saved block
-npm run cli -- datasets transactions n // block n
-npm run cli -- datasets transactions all // all (skips already flattened blocks)
-```
+**Milestone 2: September 2023**
 
-### Mongo
+* Sprint planning
+* sBTC Bridge API support for Mini Contract development
+* sBTC Signer Dashboard API support for Mini Contract development
+* sBTC Bridge support for commit reveal
+* sBTC Signer Dashboard front end stories and mockups
 
-Connects to Mongo Cloud development db instance using environment variables see Environment secton.
+**Milestone 3: October 2023**
 
-Local IP address has to be added to Mongo Cloud allowed network - contact system administrator.
+* Sprint planning
+* Delivery of sBTC Bridge for sBTC Mini Phase 1
+* Delivery of sBTC Signer Dashboard for sBTC Mini Phase 1
 
-## Test
+**Milestone 4: November 2023**
 
-Tests outstanding,
+* Sprint planning
+* Delivery of sBTC Bridge for sBTC Mini Phase 2
+* Delivery of sBTC Signer Dashboard for sBTC Mini Phase 2
 
-```bash
-npm run test
-```
+**Milestone 5: December 2023**
 
-## Deploy
+* Sprint planning
+* Delivery of sBTC Bridge for sBTC Mini Phase 2
+* Delivery of sBTC Signer Dashboard for sBTC Mini Phase 2
 
-run deploy script to build / push docker image then on target server run following;
+**Milestone 6: January 2023**
 
-```bash
-# stag
-docker rm -f aiflow_api_production
-docker run -d -t -i --network host --name aiflow_api_production -p 6060:6060 -e NODE_ENV='linode-production' mijoco/aiflow_api
-```
+* Sprint planning
+* Prepare for sBTC Bridge Nakamoto Release
+* Delivery of sBTC Signer Dashboard Nakamoto Release
+
+**Appendix: About Me**
+
+1. Stacks advocate and contributor since 2018
+2. Contributor to sBTC since Jan 23
+3. Successfully delivered several projects on Stacks
+   * [Loopbomb](https://loopbomb.io)
+   * [Thisisnumberone](https://thisisnumberone.com)
+   * [Ecosystem DAO](https://stx.eco)
+   * [sBTC Bridge Alpha](https://bridge.stx.eco)
+4. Spoken at several blockchain events and ran bitcoin and stacks meetups in Brighton, UK
+5. Contributor to stacks governance via the DAO and Technical CAB
+
+Thanks for taking the time to review my application.&#x20;
+
+Feel free to leave any feedback or comments.&#x20;
+
+I look forward hopefully to being a part of this exciting project !
