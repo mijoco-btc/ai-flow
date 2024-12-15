@@ -28,7 +28,7 @@ These are meant as a guide as they are checks implemented in business logic as o
 
 ## Crew and Resource Management
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-29 at 14.43.49.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot 2024-05-29 at 14.43.49.png" alt=""><figcaption></figcaption></figure>
 
 Following suggestion shows flow using resource contracts controlling a 402 payment flow with Crews (collections of human or AI agents) offering services.
 

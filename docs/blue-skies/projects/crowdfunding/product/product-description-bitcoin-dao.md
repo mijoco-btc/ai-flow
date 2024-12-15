@@ -28,13 +28,29 @@ Bitcoin DAO provide options for sunsetting the executive / core team. This allow
 
 ### Core Features
 
+**DAO Launcher**
+
+* configure DAO with smart templates
+* easy deploy dao contracts
+* admin features for tracking dao
+* analytics / reporting
+
 **Crowdfunding**
 
 * build and drive campaigns with built in social plugins
 * extend reach with ai agents
-* define and set targets for your campain
-* configure and launch your project DAO
-* crowdfund over multiple channels - not least direct bitcoin investment
+* define and set targets for your campaign
+* crowdfund over multiple channels
+* direct bitcoin funding via sBTC
+* analytics / reporting
+
+**Proposing and Voting**
+
+* running the dao&#x20;
+* deploy / manage proposals
+* social channels for proposals
+* conduct voting
+* results - analysis, breakdowns, engagement tracking
 
 ### About the DAO
 
@@ -65,7 +81,7 @@ This is a crowdfunding platform aimed at builders and serial entrepreneurs to ma
 * Voting extension - a smart contract deployed on stacks blockchain
 * Token extension - a smart contract deployed on stacks blockchain
 
-#### Project Stories
+### Part 1: Crowdfunding Stories
 
 **A) Terri lists MeDeFi project**
 
@@ -120,17 +136,25 @@ Pre-requisite: the project DAO is fully deployed on stacks blockchain
 * Bob signs transaction - equivalent amount of sBTC is minted to the Treasury contract
 * If the project dao has a governance token BitcoinDao mints the corresponding amount of governance token to Bobs address - note this is more complex - the amount of GVM token Bob receives is dependent on the crypto currency donated.
 
+### Part 2: Proposing and Voting Stories
 
+The secondary functionality of the platform deals with what comes next - proposing and voting
 
+The details depend on the options chosen by Terri when initially setting up the DAO&#x20;
 
+A) Bob makes a proposal
 
+* depending on the dao config Bob must be either a core team member or public member of the dao (with voting rights)
+* Bob elects deploy a proposal by;
+  * entering required information;
+    * title
+    * summary
+    * description
+    * start/end heights (bitcoin blockchain)
+    * external links eg to github project / issue
+  * if the proposal requires funding
 
-
-
-
-
-
-
+B) Al
 
 
 

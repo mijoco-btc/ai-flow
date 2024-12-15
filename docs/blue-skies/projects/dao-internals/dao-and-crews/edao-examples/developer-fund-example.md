@@ -88,7 +88,7 @@ classDiagram
 
 ### Example Flow
 
-<figure><img src="../../../.gitbook/assets/eDAO-devfund_sequence.drawio (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/eDAO-devfund_sequence.drawio (2).png" alt=""><figcaption></figcaption></figure>
 
 The sequence above is how eDAO executes a simple dev fund proposal;
 

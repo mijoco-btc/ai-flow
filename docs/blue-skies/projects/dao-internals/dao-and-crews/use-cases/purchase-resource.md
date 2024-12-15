@@ -14,7 +14,7 @@ Resource payment flow
 4. User pays
 5. User makes another successful request to resource server for resource
 
-<figure><img src="../../../.gitbook/assets/ResourceFlow1.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/ResourceFlow1.drawio.png" alt=""><figcaption></figcaption></figure>
 
 
 

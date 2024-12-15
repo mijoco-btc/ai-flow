@@ -1,6 +1,6 @@
 ---
-description: top level for crowdfunding project
+description: High level planning
 ---
 
-# Crowdfunding
+# Blue Skies
 

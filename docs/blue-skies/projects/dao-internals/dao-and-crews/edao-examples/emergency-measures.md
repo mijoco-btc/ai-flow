@@ -8,7 +8,7 @@ description: Diagrams to show the core eDAO emergency measures
 
 The DAO has two mechanisms built in to facilitate the operational on-boarding. These are emergency execution and emergency proposals.
 
-<figure><img src="../../../.gitbook/assets/eDAO-emergencies_class.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/eDAO-emergencies_class.drawio.png" alt=""><figcaption></figcaption></figure>
 
 **Emergency Execute Extension**
 
