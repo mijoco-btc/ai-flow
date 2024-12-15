@@ -64,9 +64,18 @@ Cons:
 
 * high level of complexity
 
+## 6. SUI ZK-KYC
 
+Started playing with this idea this autumn - basically we create a client side proof of humanity system and use the validation of the zk proof to automatically issue a soul bound NFT (SBT)
 
+Pros:
 
+* horizontal infrastructure
+* can be integrated into mixer fm
+* has several potential roadmap and integration possibilities
+* use Googles Tensorflow AI project for client side facial recognition-based biometric verification or liveness detection with facial matching.
 
+Cons:&#x20;
 
+* can't think of any?
 
