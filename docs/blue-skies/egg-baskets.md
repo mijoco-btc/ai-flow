@@ -75,6 +75,7 @@ Pros:
 * has several potential roadmap and integration possibilities
 * use Googles Tensorflow AI project for client side facial recognition-based biometric verification or liveness detection with facial matching.
 * no specific competition on SUI
+* easy to adapt to other chains - just login api integration required.
 
 Cons:&#x20;
 
