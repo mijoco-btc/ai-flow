@@ -74,6 +74,7 @@ Pros:
 * can be integrated into mixer fm
 * has several potential roadmap and integration possibilities
 * use Googles Tensorflow AI project for client side facial recognition-based biometric verification or liveness detection with facial matching.
+* no specific competition on SUI
 
 Cons:&#x20;
 
