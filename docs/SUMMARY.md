@@ -23,3 +23,5 @@
         * [Deployment](blue-skies/projects/dao-internals/dao-and-crews/deployment.md)
         * [BNS-X](blue-skies/projects/dao-internals/dao-and-crews/bns-x/README.md)
           * [mainnet](blue-skies/projects/dao-internals/dao-and-crews/bns-x/mainnet.md)
+  * [Tech Stacks](blue-skies/tech-stacks/README.md)
+    * [Sui](blue-skies/tech-stacks/sui.md)

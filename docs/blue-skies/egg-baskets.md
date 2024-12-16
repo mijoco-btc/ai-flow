@@ -28,17 +28,22 @@ Cons:
 
 ## 3. MixerFM on SUI
 
-We use existing crowdfunding platform (see above) and focus on launching MixerFM on SUI.
+We use the existing crowdfunding platform (see above) and focus on launching MixerFM on SUI.
 
-We build out MixerFM and introduce zk login to the app.
+We built out MixerFM and introduced zk login to the app.
+
+Mixer brings 43M songs and 2.3M artist to SUI
 
 Pros:
 
-* traction already
+* traction already to show product
 
 Cons:
 
-* competition is [Mirai](https://blog.sui.io/studio-mirai-pfp-nft-music-platform/)&#x20;
+* Competition could be [Mirai](https://blog.sui.io/studio-mirai-pfp-nft-music-platform/)&#x20;
+* They claim "The team envisions Coda as a platform that can connect musicians and fans in three ways: publishing and selling albums, selling concert tickets, and giving artists more direct insight into their fans.
+
+Considerations
 
 ## 4. Infrastructure on SUI
 
