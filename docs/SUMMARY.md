@@ -25,3 +25,5 @@
           * [mainnet](blue-skies/projects/dao-internals/dao-and-crews/bns-x/mainnet.md)
   * [Tech Stacks](blue-skies/tech-stacks/README.md)
     * [Sui](blue-skies/tech-stacks/sui.md)
+    * [Tech Stack](blue-skies/tech-stacks/tech-stack/README.md)
+      * [C-GPT - Svelte vs Framer](blue-skies/tech-stacks/tech-stack/c-gpt-svelte-vs-framer.md)
