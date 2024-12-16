@@ -64,6 +64,8 @@ we bring existing zk bridge technology to sui eg zkBridge by Polyhedra Network o
 Pros:
 
 * on trend technology
+* think about bridging bitcoin ordinals or runes to sui - using zk starks ?
+* has a cross chain feel - especially if the verifier is off-chain (as it'd have to be for most chains).
 
 Cons:
 
