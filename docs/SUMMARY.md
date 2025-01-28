@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Big Market](README.md)
-  * [Market Rules](big-market/market-rules.md)
+  * [Market Rules](big-market/market-rules/README.md)
+    * [Resolution Voting](big-market/market-rules/resolution-voting.md)
   * [Egg Baskets](big-market/egg-baskets.md)
   * [Projects](big-market/projects/README.md)
     * [Crowdfunding](big-market/projects/crowdfunding/README.md)

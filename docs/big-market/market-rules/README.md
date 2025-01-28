@@ -45,8 +45,21 @@ There a three types of fees taken at different times during trading;
 
 1. Dev Fund - taken from initial stake and used to pay running costs
 2. DAO Fee - taken from claimed winnings and paid into the community treasury
+3. Market Fee - set by market creators - fundraise via market creation
 
-Coming soon: markets (created by independent/external project) are able to use their markets for fund raising via selecting a sliding percentage when creating their market
+## Market Creation Fee
 
+```clarity
+(if (and (not (is-eq tx-sender (var-get resolution-agent))) (> (var-get market-create-fee) u0))
+  (try! (stx-transfer? (var-get market-create-fee) tx-sender .bde006-treasury))
+  true
+)
+```
 
+Fee is charged if market-create-fee is more than 0 and the user is other than &#x20;
 
+## Market Fee
+
+Markets can charge a fee up to `market-max-fee` set by the DAO.
+
+Market fees are paid by the winners.
