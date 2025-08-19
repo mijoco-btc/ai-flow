@@ -36,4 +36,5 @@
 * [Gitês](rennovations/gites/README.md)
   * [Brémoy (Calvados, Lower Normandy)](rennovations/gites/bremoy-calvados-lower-normandy.md)
   * [Les Andelys (Eure, Upper Normandy)](rennovations/gites/les-andelys-eure-upper-normandy.md)
-* [Covering Costs](rennovations/covering-costs.md)
+  * [Renting Lansdowne](rennovations/gites/renting-lansdowne.md)
+  * [Dual-Market Model](rennovations/gites/dual-market-model.md)

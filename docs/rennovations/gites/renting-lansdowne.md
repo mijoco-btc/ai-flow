@@ -1,4 +1,4 @@
-# Covering Costs
+# Renting Lansdowne
 
 if we moved to our french home while rennovating what could we expect to earn (airbnb, short term lets) from our 2/3 bedroom edwardian appartment in hove, brighton - 2 mins walk to sea front and 20mins walk to city centre?
 
@@ -57,3 +57,6 @@ Let’s break it down into two scenarios:
 This aligns with the strong demand and premium positioning of Hove as both seaside and cultural magnet, especially in your central, walk-to-beach location.
 
 Let me know if you'd like a breakdown of net cash flow after costs, or help running occupancy vs. pricing seasonally—or even suggestions on how to market your listing to maximize earnings.
+
+
+
