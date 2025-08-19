@@ -1,6 +1,6 @@
 # Brémoy (Calvados, Lower Normandy)
 
-https://www.frenchestateagents.com/french-property-for-sale/view/A22554VIC14/house-for-sale-br%C3%A9moy-calvados-normandy-france can you discern pros and cons?
+[reference](https://www.frenchestateagents.com/french-property-for-sale/view/A22554VIC14/house-for-sale-br%C3%A9moy-calvados-normandy-france):  can you discern pros and cons?
 
 ## Snapshot
 

@@ -38,3 +38,4 @@
   * [Les Andelys (Eure, Upper Normandy)](rennovations/gites/les-andelys-eure-upper-normandy.md)
   * [Renting Lansdowne](rennovations/gites/renting-lansdowne.md)
   * [Dual-Market Model](rennovations/gites/dual-market-model.md)
+  * [Learning French](rennovations/gites/learning-french.md)
